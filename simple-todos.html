@@ -1,4 +1,4 @@
-<head>
+<!--<head>
     <title>Todo list</title>
 </head>
 
@@ -13,6 +13,36 @@
               {{> task}}
             {{/each}}
         </ul>
+    </div>
+</body>
+
+
+<template name="task">
+  <li>{{text}}</li>
+</template>-->
+   
+<head>
+    <title>Todo list</title>
+</head>
+
+
+<body>
+    <div class="container">
+       <header>
+        <h1>Todo List</h1>
+       </header>
+       
+       <ul>
+            {{#each tasks}}
+              {{> task}}
+            {{/each}}
+        </ul>
+       
+       
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Ingrese su nueva tarea">
+          <input type="submit" value="nueva tarea">
+        </form>
     </div>
 </body>
 
