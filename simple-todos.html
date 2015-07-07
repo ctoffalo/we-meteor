@@ -1,30 +1,20 @@
-<!--<head>
-    <title>Todo list</title>
+<head>
+  <title>Todo List</title>
 </head>
-
 
 <body>
-    <div class="container">
-       <header>
-        <h1>Todo List</h1>
-       </header>
-        <ul>
-            {{#each tasks}}
-              {{> task}}
-            {{/each}}
-        </ul>
-    </div>
-</body>
+  <div class="container">
+    <header>
+      <h1>Todo List ({{incompleteCount}})</h1>
 
+      <label class="hide-completed">
+        <input type="checkbox" checked="{{hideCompleted}}" />
+        Hide Completed Tasks
+      </label>
 
-<template name="task">
-  <li>{{text}}</li>
-</template>-->
-   
-<head>
-    <title>Todo list</title>
-</head>
+      {{> loginButtons}}
 
+<<<<<<< HEAD
 
 <body>
     <div class="container">
@@ -53,14 +43,29 @@
         </form>
         {{/if}}
     </div>
-</body>
+=======
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
+    </header>
 
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+>>>>>>> rama_para_mergear
+</body>
 
 <template name="task">
   <li class="{{#if checked}}checked{{/if}}">
     <button class="delete">&times;</button>
 
     <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+<<<<<<< HEAD
     
     <span class="text">{{text}}</span>
     <span class="datoExtra">{{datoExtra}}</span>
@@ -71,3 +76,9 @@
 <!--<template name="task">
   <li>{{text}}</li>
 </template>-->
+=======
+
+    <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+  </li>
+</template>
+>>>>>>> rama_para_mergear

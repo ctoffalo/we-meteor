@@ -6,5 +6,9 @@
 
 meteor-platform
 autopublish
+<<<<<<< HEAD
+=======
+insecure
+>>>>>>> rama_para_mergear
 accounts-ui
 accounts-password
